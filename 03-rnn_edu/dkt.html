@@ -11854,139 +11854,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">skill_dict</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>110</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">response_array</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[37]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(584, 100)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">skill_array</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(584, 100, 111)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">skill_response_array</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[32]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(584, 100, 222)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">keras</span>
@@ -12043,73 +11911,10 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using Theano backend.
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>skill2skill
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-input skills (InputLayer)    (None, 99, 111)           0         
-_________________________________________________________________
-lstm layer (LSTM)            (None, 99, 64)            45056     
-_________________________________________________________________
-probability (TimeDistributed (None, 99, 111)           7215      
-=================================================================
-Total params: 52,271
-Trainable params: 52,271
-Non-trainable params: 0
-_________________________________________________________________
-dkt
-____________________________________________________________________________________________________
-Layer (type)                     Output Shape          Param #     Connected to                     
-====================================================================================================
-input skills (InputLayer)        (None, 99, 222)       0                                            
-____________________________________________________________________________________________________
-lstm layer (LSTM)                (None, 99, 64)        73472       input skills[0][0]               
-____________________________________________________________________________________________________
-probability for each (TimeDistri (None, 99, 111)       7215        lstm layer[0][0]                 
-____________________________________________________________________________________________________
-next_skill_tested (InputLayer)   (None, 99, 111)       0                                            
-____________________________________________________________________________________________________
-multiply (Multiply)              (None, 99, 111)       0           probability for each[0][0]       
-                                                                   next_skill_tested[0][0]          
-____________________________________________________________________________________________________
-reduce dim (Lambda)              (None, 99, 1)         0           multiply[0][0]                   
-====================================================================================================
-Total params: 80,687
-Trainable params: 80,687
-Non-trainable params: 0
-____________________________________________________________________________________________________
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12127,83 +11932,10 @@ skill2skill_model.fit(skill_array[:, 0:-1],
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 467 samples, validate on 117 samples
-Epoch 1/20
-467/467 [==============================] - 1s - loss: 4.6170 - acc: 0.1950 - val_loss: 4.5729 - val_acc: 0.2988
-Epoch 2/20
-467/467 [==============================] - 1s - loss: 4.2278 - acc: 0.1550 - val_loss: 4.4697 - val_acc: 0.0483
-Epoch 3/20
-467/467 [==============================] - 2s - loss: 3.6677 - acc: 0.1333 - val_loss: 4.1492 - val_acc: 0.1012
-Epoch 4/20
-467/467 [==============================] - 1s - loss: 3.1779 - acc: 0.2505 - val_loss: 3.8165 - val_acc: 0.1483
-Epoch 5/20
-467/467 [==============================] - 1s - loss: 2.7544 - acc: 0.3735 - val_loss: 3.5075 - val_acc: 0.2427
-Epoch 6/20
-467/467 [==============================] - 1s - loss: 2.4293 - acc: 0.4355 - val_loss: 3.1725 - val_acc: 0.3220
-Epoch 7/20
-467/467 [==============================] - 1s - loss: 2.1904 - acc: 0.4799 - val_loss: 2.9253 - val_acc: 0.3916
-Epoch 8/20
-467/467 [==============================] - 1s - loss: 1.9651 - acc: 0.5337 - val_loss: 2.6795 - val_acc: 0.4381
-Epoch 9/20
-467/467 [==============================] - 1s - loss: 1.7745 - acc: 0.5865 - val_loss: 2.4644 - val_acc: 0.4756
-Epoch 10/20
-467/467 [==============================] - 1s - loss: 1.6159 - acc: 0.6326 - val_loss: 2.2535 - val_acc: 0.5142
-Epoch 11/20
-467/467 [==============================] - 1s - loss: 1.5129 - acc: 0.6496 - val_loss: 2.1068 - val_acc: 0.5317
-Epoch 12/20
-467/467 [==============================] - 1s - loss: 1.4089 - acc: 0.6717 - val_loss: 1.9672 - val_acc: 0.5535
-Epoch 13/20
-467/467 [==============================] - 1s - loss: 1.2970 - acc: 0.6983 - val_loss: 1.8139 - val_acc: 0.5742
-Epoch 14/20
-467/467 [==============================] - 1s - loss: 1.2062 - acc: 0.7132 - val_loss: 1.7264 - val_acc: 0.5972
-Epoch 15/20
-467/467 [==============================] - 1s - loss: 1.1404 - acc: 0.7263 - val_loss: 1.6623 - val_acc: 0.6113
-Epoch 16/20
-467/467 [==============================] - 1s - loss: 1.0881 - acc: 0.7363 - val_loss: 1.5911 - val_acc: 0.6193
-Epoch 17/20
-467/467 [==============================] - 1s - loss: 1.0495 - acc: 0.7428 - val_loss: 1.5140 - val_acc: 0.6558
-Epoch 18/20
-467/467 [==============================] - 1s - loss: 0.9877 - acc: 0.7582 - val_loss: 1.4528 - val_acc: 0.6722
-Epoch 19/20
-467/467 [==============================] - 1s - loss: 0.9410 - acc: 0.7684 - val_loss: 1.4058 - val_acc: 0.6827
-Epoch 20/20
-467/467 [==============================] - 1s - loss: 0.9027 - acc: 0.7805 - val_loss: 1.3694 - val_acc: 0.6814
-CPU times: user 1min 15s, sys: 5.39 s, total: 1min 20s
-Wall time: 2min 24s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[41]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x129ea1d68&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12217,79 +11949,6 @@ dkt_model.fit([skill_response_array[:, 0:-1], skill_array[:, 1:]],
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 467 samples, validate on 117 samples
-Epoch 1/20
-467/467 [==============================] - 2s - loss: 0.6735 - acc: 0.7242 - val_loss: 0.6643 - val_acc: 0.8053
-Epoch 2/20
-467/467 [==============================] - 3s - loss: 0.6072 - acc: 0.8360 - val_loss: 0.6066 - val_acc: 0.7192
-Epoch 3/20
-467/467 [==============================] - 3s - loss: 0.4875 - acc: 0.8307 - val_loss: 0.5034 - val_acc: 0.8279
-Epoch 4/20
-467/467 [==============================] - 2s - loss: 0.4167 - acc: 0.8489 - val_loss: 0.4606 - val_acc: 0.8300
-Epoch 5/20
-467/467 [==============================] - 3s - loss: 0.3928 - acc: 0.8507 - val_loss: 0.4536 - val_acc: 0.8311
-Epoch 6/20
-467/467 [==============================] - 4s - loss: 0.3828 - acc: 0.8552 - val_loss: 0.4447 - val_acc: 0.8313
-Epoch 7/20
-467/467 [==============================] - 3s - loss: 0.3782 - acc: 0.8559 - val_loss: 0.4394 - val_acc: 0.8296
-Epoch 8/20
-467/467 [==============================] - 3s - loss: 0.3772 - acc: 0.8555 - val_loss: 0.4479 - val_acc: 0.8291
-Epoch 9/20
-467/467 [==============================] - 3s - loss: 0.3725 - acc: 0.8574 - val_loss: 0.4288 - val_acc: 0.8299
-Epoch 10/20
-467/467 [==============================] - 2s - loss: 0.3686 - acc: 0.8571 - val_loss: 0.4392 - val_acc: 0.8307
-Epoch 11/20
-467/467 [==============================] - 2s - loss: 0.3661 - acc: 0.8568 - val_loss: 0.4359 - val_acc: 0.8300
-Epoch 12/20
-467/467 [==============================] - 2s - loss: 0.3628 - acc: 0.8571 - val_loss: 0.4344 - val_acc: 0.8306
-Epoch 13/20
-467/467 [==============================] - 2s - loss: 0.3598 - acc: 0.8571 - val_loss: 0.4293 - val_acc: 0.8319
-Epoch 14/20
-467/467 [==============================] - 2s - loss: 0.3571 - acc: 0.8587 - val_loss: 0.4287 - val_acc: 0.8313
-Epoch 15/20
-467/467 [==============================] - 1s - loss: 0.3557 - acc: 0.8585 - val_loss: 0.4220 - val_acc: 0.8341
-Epoch 16/20
-467/467 [==============================] - 2s - loss: 0.3541 - acc: 0.8600 - val_loss: 0.4316 - val_acc: 0.8343
-Epoch 17/20
-467/467 [==============================] - 2s - loss: 0.3525 - acc: 0.8601 - val_loss: 0.4249 - val_acc: 0.8342
-Epoch 18/20
-467/467 [==============================] - 2s - loss: 0.3494 - acc: 0.8615 - val_loss: 0.4194 - val_acc: 0.8377
-Epoch 19/20
-467/467 [==============================] - 2s - loss: 0.3480 - acc: 0.8619 - val_loss: 0.4243 - val_acc: 0.8362
-Epoch 20/20
-467/467 [==============================] - 2s - loss: 0.3488 - acc: 0.8622 - val_loss: 0.4199 - val_acc: 0.8368
-CPU times: user 1min 22s, sys: 7.04 s, total: 1min 29s
-Wall time: 1min 31s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[42]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x12c76ae48&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12684,7 +12343,7 @@ Wall time: 1min 31s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -12699,79 +12358,6 @@ skill2skill_model.fit(X_train,
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 326 samples, validate on 82 samples
-Epoch 1/20
-326/326 [==============================] - 1s - loss: 4.6533 - acc: 0.1423 - val_loss: 4.5828 - val_acc: 0.4233
-Epoch 2/20
-326/326 [==============================] - 1s - loss: 4.5181 - acc: 0.4430 - val_loss: 4.3526 - val_acc: 0.3755
-Epoch 3/20
-326/326 [==============================] - 1s - loss: 4.1315 - acc: 0.2106 - val_loss: 3.8672 - val_acc: 0.1398
-Epoch 4/20
-326/326 [==============================] - 1s - loss: 3.7409 - acc: 0.1613 - val_loss: 3.5118 - val_acc: 0.2166
-Epoch 5/20
-326/326 [==============================] - 1s - loss: 3.4378 - acc: 0.2185 - val_loss: 3.2544 - val_acc: 0.2762
-Epoch 6/20
-326/326 [==============================] - 1s - loss: 3.1585 - acc: 0.3196 - val_loss: 2.9795 - val_acc: 0.3707
-Epoch 7/20
-326/326 [==============================] - 1s - loss: 2.8959 - acc: 0.3604 - val_loss: 2.7486 - val_acc: 0.3863
-Epoch 8/20
-326/326 [==============================] - 1s - loss: 2.6670 - acc: 0.3920 - val_loss: 2.5466 - val_acc: 0.4276
-Epoch 9/20
-326/326 [==============================] - 1s - loss: 2.4612 - acc: 0.4405 - val_loss: 2.3498 - val_acc: 0.4640
-Epoch 10/20
-326/326 [==============================] - 1s - loss: 2.3162 - acc: 0.4738 - val_loss: 2.2786 - val_acc: 0.4892
-Epoch 11/20
-326/326 [==============================] - 1s - loss: 2.1886 - acc: 0.5107 - val_loss: 2.0904 - val_acc: 0.5170
-Epoch 12/20
-326/326 [==============================] - 1s - loss: 2.0268 - acc: 0.5426 - val_loss: 1.9686 - val_acc: 0.5474
-Epoch 13/20
-326/326 [==============================] - 1s - loss: 1.8983 - acc: 0.5743 - val_loss: 1.8420 - val_acc: 0.5740
-Epoch 14/20
-326/326 [==============================] - 1s - loss: 1.7876 - acc: 0.5972 - val_loss: 1.7449 - val_acc: 0.5910
-Epoch 15/20
-326/326 [==============================] - 1s - loss: 1.6878 - acc: 0.6126 - val_loss: 1.6440 - val_acc: 0.6090
-Epoch 16/20
-326/326 [==============================] - 1s - loss: 1.5961 - acc: 0.6331 - val_loss: 1.5593 - val_acc: 0.6307
-Epoch 17/20
-326/326 [==============================] - 1s - loss: 1.5161 - acc: 0.6513 - val_loss: 1.4921 - val_acc: 0.6527
-Epoch 18/20
-326/326 [==============================] - 1s - loss: 1.4482 - acc: 0.6656 - val_loss: 1.4310 - val_acc: 0.6706
-Epoch 19/20
-326/326 [==============================] - 1s - loss: 1.3890 - acc: 0.6787 - val_loss: 1.3727 - val_acc: 0.6778
-Epoch 20/20
-326/326 [==============================] - 1s - loss: 1.3295 - acc: 0.6963 - val_loss: 1.3053 - val_acc: 0.6935
-CPU times: user 55.4 s, sys: 3.58 s, total: 58.9 s
-Wall time: 38 s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x1322a4240&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13121,7 +12707,7 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -13136,79 +12722,6 @@ s2s_128_model.fit(X_train,
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 326 samples, validate on 82 samples
-Epoch 1/20
-326/326 [==============================] - 2s - loss: 4.6279 - acc: 0.2381 - val_loss: 4.4789 - val_acc: 0.4958
-Epoch 2/20
-326/326 [==============================] - 2s - loss: 4.2272 - acc: 0.3127 - val_loss: 3.7845 - val_acc: 0.2232
-Epoch 3/20
-326/326 [==============================] - 2s - loss: 3.6545 - acc: 0.2389 - val_loss: 3.2747 - val_acc: 0.2636
-Epoch 4/20
-326/326 [==============================] - 2s - loss: 3.1287 - acc: 0.2737 - val_loss: 2.8435 - val_acc: 0.3448
-Epoch 5/20
-326/326 [==============================] - 2s - loss: 2.6708 - acc: 0.3595 - val_loss: 2.4688 - val_acc: 0.4191
-Epoch 6/20
-326/326 [==============================] - 2s - loss: 2.3373 - acc: 0.4474 - val_loss: 2.2300 - val_acc: 0.4718
-Epoch 7/20
-326/326 [==============================] - 2s - loss: 2.1123 - acc: 0.4891 - val_loss: 1.9797 - val_acc: 0.5248
-Epoch 8/20
-326/326 [==============================] - 2s - loss: 1.8995 - acc: 0.5505 - val_loss: 1.8180 - val_acc: 0.5838
-Epoch 9/20
-326/326 [==============================] - 4s - loss: 1.7225 - acc: 0.5860 - val_loss: 1.7010 - val_acc: 0.5887
-Epoch 10/20
-326/326 [==============================] - 2s - loss: 1.5751 - acc: 0.6170 - val_loss: 1.5052 - val_acc: 0.6335
-Epoch 11/20
-326/326 [==============================] - 2s - loss: 1.4406 - acc: 0.6469 - val_loss: 1.4081 - val_acc: 0.6619
-Epoch 12/20
-326/326 [==============================] - 2s - loss: 1.3413 - acc: 0.6756 - val_loss: 1.3315 - val_acc: 0.6806
-Epoch 13/20
-326/326 [==============================] - 2s - loss: 1.2550 - acc: 0.7009 - val_loss: 1.2336 - val_acc: 0.6904
-Epoch 14/20
-326/326 [==============================] - 2s - loss: 1.1747 - acc: 0.7134 - val_loss: 1.1567 - val_acc: 0.7269
-Epoch 15/20
-326/326 [==============================] - 2s - loss: 1.1067 - acc: 0.7376 - val_loss: 1.0925 - val_acc: 0.7254
-Epoch 16/20
-326/326 [==============================] - 2s - loss: 1.0463 - acc: 0.7471 - val_loss: 1.0376 - val_acc: 0.7396
-Epoch 17/20
-326/326 [==============================] - 2s - loss: 1.0091 - acc: 0.7534 - val_loss: 0.9971 - val_acc: 0.7501
-Epoch 18/20
-326/326 [==============================] - 2s - loss: 0.9565 - acc: 0.7662 - val_loss: 0.9530 - val_acc: 0.7591
-Epoch 19/20
-326/326 [==============================] - 2s - loss: 0.9159 - acc: 0.7746 - val_loss: 0.9171 - val_acc: 0.7715
-Epoch 20/20
-326/326 [==============================] - 2s - loss: 0.8811 - acc: 0.7826 - val_loss: 0.8956 - val_acc: 0.7715
-CPU times: user 1min 31s, sys: 6.09 s, total: 1min 37s
-Wall time: 59.8 s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[89]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x140e574a8&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13311,7 +12824,7 @@ Accuracy with 128 hidden nodes:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -13325,79 +12838,6 @@ dkt_model.fit([X1_train, X2_train],
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 326 samples, validate on 82 samples
-Epoch 1/20
-326/326 [==============================] - 1s - loss: 0.6832 - acc: 0.6557 - val_loss: 0.6666 - val_acc: 0.7922
-Epoch 2/20
-326/326 [==============================] - 1s - loss: 0.6502 - acc: 0.8279 - val_loss: 0.6302 - val_acc: 0.8289
-Epoch 3/20
-326/326 [==============================] - 1s - loss: 0.5897 - acc: 0.8363 - val_loss: 0.5278 - val_acc: 0.8060
-Epoch 4/20
-326/326 [==============================] - 1s - loss: 0.4948 - acc: 0.8177 - val_loss: 0.4607 - val_acc: 0.8370
-Epoch 5/20
-326/326 [==============================] - 1s - loss: 0.4367 - acc: 0.8409 - val_loss: 0.4309 - val_acc: 0.8389
-Epoch 6/20
-326/326 [==============================] - 1s - loss: 0.4118 - acc: 0.8418 - val_loss: 0.4242 - val_acc: 0.8408
-Epoch 7/20
-326/326 [==============================] - 1s - loss: 0.4024 - acc: 0.8450 - val_loss: 0.4182 - val_acc: 0.8411
-Epoch 8/20
-326/326 [==============================] - 1s - loss: 0.3949 - acc: 0.8475 - val_loss: 0.4171 - val_acc: 0.8412
-Epoch 9/20
-326/326 [==============================] - 1s - loss: 0.3932 - acc: 0.8507 - val_loss: 0.4122 - val_acc: 0.8406
-Epoch 10/20
-326/326 [==============================] - 1s - loss: 0.3854 - acc: 0.8511 - val_loss: 0.4100 - val_acc: 0.8413
-Epoch 11/20
-326/326 [==============================] - 1s - loss: 0.3806 - acc: 0.8513 - val_loss: 0.4054 - val_acc: 0.8413
-Epoch 12/20
-326/326 [==============================] - 1s - loss: 0.3781 - acc: 0.8528 - val_loss: 0.4016 - val_acc: 0.8413
-Epoch 13/20
-326/326 [==============================] - 1s - loss: 0.3753 - acc: 0.8529 - val_loss: 0.3979 - val_acc: 0.8415
-Epoch 14/20
-326/326 [==============================] - 1s - loss: 0.3709 - acc: 0.8545 - val_loss: 0.3997 - val_acc: 0.8434
-Epoch 15/20
-326/326 [==============================] - 1s - loss: 0.3667 - acc: 0.8557 - val_loss: 0.3940 - val_acc: 0.8441
-Epoch 16/20
-326/326 [==============================] - 1s - loss: 0.3635 - acc: 0.8568 - val_loss: 0.3928 - val_acc: 0.8444
-Epoch 17/20
-326/326 [==============================] - 1s - loss: 0.3597 - acc: 0.8587 - val_loss: 0.3916 - val_acc: 0.8442
-Epoch 18/20
-326/326 [==============================] - 1s - loss: 0.3583 - acc: 0.8590 - val_loss: 0.3929 - val_acc: 0.8449
-Epoch 19/20
-326/326 [==============================] - 1s - loss: 0.3563 - acc: 0.8590 - val_loss: 0.3898 - val_acc: 0.8444
-Epoch 20/20
-326/326 [==============================] - 1s - loss: 0.3568 - acc: 0.8599 - val_loss: 0.3877 - val_acc: 0.8448
-CPU times: user 52.9 s, sys: 3.69 s, total: 56.6 s
-Wall time: 34.9 s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[101]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x16af02390&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13604,7 +13044,7 @@ ________________________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -13618,79 +13058,6 @@ dkt_128_model.fit([X1_train, X2_train],
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 326 samples, validate on 82 samples
-Epoch 1/20
-326/326 [==============================] - 2s - loss: 0.6695 - acc: 0.7454 - val_loss: 0.6366 - val_acc: 0.8327
-Epoch 2/20
-326/326 [==============================] - 2s - loss: 0.5696 - acc: 0.8423 - val_loss: 0.4805 - val_acc: 0.8344
-Epoch 3/20
-326/326 [==============================] - 2s - loss: 0.4444 - acc: 0.8397 - val_loss: 0.4346 - val_acc: 0.8407
-Epoch 4/20
-326/326 [==============================] - 2s - loss: 0.4114 - acc: 0.8429 - val_loss: 0.4258 - val_acc: 0.8416
-Epoch 5/20
-326/326 [==============================] - 2s - loss: 0.4038 - acc: 0.8452 - val_loss: 0.4159 - val_acc: 0.8413
-Epoch 6/20
-326/326 [==============================] - 2s - loss: 0.3959 - acc: 0.8491 - val_loss: 0.4138 - val_acc: 0.8408
-Epoch 7/20
-326/326 [==============================] - 2s - loss: 0.3937 - acc: 0.8488 - val_loss: 0.4104 - val_acc: 0.8412
-Epoch 8/20
-326/326 [==============================] - 2s - loss: 0.3882 - acc: 0.8513 - val_loss: 0.4072 - val_acc: 0.8408
-Epoch 9/20
-326/326 [==============================] - 2s - loss: 0.3842 - acc: 0.8500 - val_loss: 0.4052 - val_acc: 0.8408
-Epoch 10/20
-326/326 [==============================] - 2s - loss: 0.3948 - acc: 0.8472 - val_loss: 0.4102 - val_acc: 0.8392
-Epoch 11/20
-326/326 [==============================] - 2s - loss: 0.3878 - acc: 0.8480 - val_loss: 0.4080 - val_acc: 0.8402
-Epoch 12/20
-326/326 [==============================] - 2s - loss: 0.3861 - acc: 0.8524 - val_loss: 0.4085 - val_acc: 0.8397
-Epoch 13/20
-326/326 [==============================] - 2s - loss: 0.3791 - acc: 0.8534 - val_loss: 0.4025 - val_acc: 0.8411
-Epoch 14/20
-326/326 [==============================] - 2s - loss: 0.3763 - acc: 0.8520 - val_loss: 0.3985 - val_acc: 0.8434
-Epoch 15/20
-326/326 [==============================] - 2s - loss: 0.3708 - acc: 0.8558 - val_loss: 0.3971 - val_acc: 0.8438
-Epoch 16/20
-326/326 [==============================] - 2s - loss: 0.3703 - acc: 0.8545 - val_loss: 0.3967 - val_acc: 0.8436
-Epoch 17/20
-326/326 [==============================] - 3s - loss: 0.3650 - acc: 0.8575 - val_loss: 0.3975 - val_acc: 0.8428
-Epoch 18/20
-326/326 [==============================] - 2s - loss: 0.3670 - acc: 0.8578 - val_loss: 0.3931 - val_acc: 0.8428
-Epoch 19/20
-326/326 [==============================] - 2s - loss: 0.3612 - acc: 0.8576 - val_loss: 0.3919 - val_acc: 0.8429
-Epoch 20/20
-326/326 [==============================] - 2s - loss: 0.3598 - acc: 0.8570 - val_loss: 0.3868 - val_acc: 0.8426
-CPU times: user 1min 26s, sys: 5.34 s, total: 1min 31s
-Wall time: 53.6 s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[125]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x144d1b7f0&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13804,7 +13171,7 @@ ________________________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -13818,79 +13185,6 @@ dkt_128_model.fit([X1_train, X2_train],
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 326 samples, validate on 82 samples
-Epoch 1/20
-326/326 [==============================] - 2s - loss: 0.6687 - acc: 0.7452 - val_loss: 0.6373 - val_acc: 0.8342
-Epoch 2/20
-326/326 [==============================] - 2s - loss: 0.5703 - acc: 0.8359 - val_loss: 0.5011 - val_acc: 0.8166
-Epoch 3/20
-326/326 [==============================] - 2s - loss: 0.4598 - acc: 0.8313 - val_loss: 0.4398 - val_acc: 0.8381
-Epoch 4/20
-326/326 [==============================] - 2s - loss: 0.4196 - acc: 0.8409 - val_loss: 0.4253 - val_acc: 0.8411
-Epoch 5/20
-326/326 [==============================] - 2s - loss: 0.4059 - acc: 0.8445 - val_loss: 0.4191 - val_acc: 0.8420
-Epoch 6/20
-326/326 [==============================] - 2s - loss: 0.3997 - acc: 0.8461 - val_loss: 0.4172 - val_acc: 0.8420
-Epoch 7/20
-326/326 [==============================] - 2s - loss: 0.3960 - acc: 0.8486 - val_loss: 0.4121 - val_acc: 0.8400
-Epoch 8/20
-326/326 [==============================] - 2s - loss: 0.3903 - acc: 0.8488 - val_loss: 0.4089 - val_acc: 0.8408
-Epoch 9/20
-326/326 [==============================] - 2s - loss: 0.3865 - acc: 0.8498 - val_loss: 0.4077 - val_acc: 0.8410
-Epoch 10/20
-326/326 [==============================] - 2s - loss: 0.3842 - acc: 0.8519 - val_loss: 0.4054 - val_acc: 0.8411
-Epoch 11/20
-326/326 [==============================] - 2s - loss: 0.3800 - acc: 0.8533 - val_loss: 0.4020 - val_acc: 0.8412
-Epoch 12/20
-326/326 [==============================] - 2s - loss: 0.3765 - acc: 0.8519 - val_loss: 0.4003 - val_acc: 0.8417
-Epoch 13/20
-326/326 [==============================] - 2s - loss: 0.3731 - acc: 0.8549 - val_loss: 0.3970 - val_acc: 0.8394
-Epoch 14/20
-326/326 [==============================] - 2s - loss: 0.3724 - acc: 0.8534 - val_loss: 0.4017 - val_acc: 0.8338
-Epoch 15/20
-326/326 [==============================] - 2s - loss: 0.3773 - acc: 0.8450 - val_loss: 0.3988 - val_acc: 0.8338
-Epoch 16/20
-326/326 [==============================] - 3s - loss: 0.3728 - acc: 0.8470 - val_loss: 0.3920 - val_acc: 0.8370
-Epoch 17/20
-326/326 [==============================] - 3s - loss: 0.3681 - acc: 0.8491 - val_loss: 0.3939 - val_acc: 0.8390
-Epoch 18/20
-326/326 [==============================] - 2s - loss: 0.3628 - acc: 0.8535 - val_loss: 0.3935 - val_acc: 0.8353
-Epoch 19/20
-326/326 [==============================] - 2s - loss: 0.3593 - acc: 0.8573 - val_loss: 0.3844 - val_acc: 0.8466
-Epoch 20/20
-326/326 [==============================] - 2s - loss: 0.3530 - acc: 0.8610 - val_loss: 0.3838 - val_acc: 0.8457
-CPU times: user 1min 34s, sys: 8.24 s, total: 1min 43s
-Wall time: 60 s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[129]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x147370278&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14049,7 +13343,7 @@ ________________________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
@@ -14063,79 +13357,6 @@ dkt_256_model.fit([X1_train, X2_train],
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 326 samples, validate on 82 samples
-Epoch 1/20
-326/326 [==============================] - 5s - loss: 0.6452 - acc: 0.7807 - val_loss: 0.5479 - val_acc: 0.8118
-Epoch 2/20
-326/326 [==============================] - 5s - loss: 0.4646 - acc: 0.8382 - val_loss: 0.4357 - val_acc: 0.8404
-Epoch 3/20
-326/326 [==============================] - 5s - loss: 0.4175 - acc: 0.8417 - val_loss: 0.4228 - val_acc: 0.8408
-Epoch 4/20
-326/326 [==============================] - 5s - loss: 0.4064 - acc: 0.8443 - val_loss: 0.4128 - val_acc: 0.8397
-Epoch 5/20
-326/326 [==============================] - 5s - loss: 0.3960 - acc: 0.8454 - val_loss: 0.4106 - val_acc: 0.8406
-Epoch 6/20
-326/326 [==============================] - 5s - loss: 0.3923 - acc: 0.8478 - val_loss: 0.4106 - val_acc: 0.8373
-Epoch 7/20
-326/326 [==============================] - 5s - loss: 0.3878 - acc: 0.8524 - val_loss: 0.4125 - val_acc: 0.8360
-Epoch 8/20
-326/326 [==============================] - 5s - loss: 0.3875 - acc: 0.8468 - val_loss: 0.4039 - val_acc: 0.8423
-Epoch 9/20
-326/326 [==============================] - 5s - loss: 0.3854 - acc: 0.8490 - val_loss: 0.3999 - val_acc: 0.8422
-Epoch 10/20
-326/326 [==============================] - 5s - loss: 0.3779 - acc: 0.8543 - val_loss: 0.4008 - val_acc: 0.8427
-Epoch 11/20
-326/326 [==============================] - 5s - loss: 0.3749 - acc: 0.8569 - val_loss: 0.3961 - val_acc: 0.8443
-Epoch 12/20
-326/326 [==============================] - 5s - loss: 0.3679 - acc: 0.8591 - val_loss: 0.3938 - val_acc: 0.8444
-Epoch 13/20
-326/326 [==============================] - 5s - loss: 0.3628 - acc: 0.8602 - val_loss: 0.3900 - val_acc: 0.8452
-Epoch 14/20
-326/326 [==============================] - 5s - loss: 0.3584 - acc: 0.8623 - val_loss: 0.3988 - val_acc: 0.8449
-Epoch 15/20
-326/326 [==============================] - 5s - loss: 0.3597 - acc: 0.8617 - val_loss: 0.3868 - val_acc: 0.8442
-Epoch 16/20
-326/326 [==============================] - 5s - loss: 0.3570 - acc: 0.8621 - val_loss: 0.3835 - val_acc: 0.8443
-Epoch 17/20
-326/326 [==============================] - 5s - loss: 0.3524 - acc: 0.8625 - val_loss: 0.3843 - val_acc: 0.8449
-Epoch 18/20
-326/326 [==============================] - 5s - loss: 0.3519 - acc: 0.8625 - val_loss: 0.3849 - val_acc: 0.8455
-Epoch 19/20
-326/326 [==============================] - 5s - loss: 0.3494 - acc: 0.8636 - val_loss: 0.3777 - val_acc: 0.8471
-Epoch 20/20
-326/326 [==============================] - 5s - loss: 0.3447 - acc: 0.8643 - val_loss: 0.3779 - val_acc: 0.8458
-CPU times: user 3min 24s, sys: 13 s, total: 3min 37s
-Wall time: 1min 57s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[133]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x141d05080&gt;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
